@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sääpalvelu Sääksi</title>
+</head>
+<body>
+    <div id="container"> <!-- SISÄLTÖ ALKAA-->
+        <header>
+            <h1>Sääpalvelu Sääksi</h1>
+        </header>
+        <nav> <!-- NAVIGOINTIPALKKI-->
+            <div></div>
+            <div id="navdiv">
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="paivansaa.html">Päivän sää</a></li>
+                    <li><a href="uvindex.html">UV-indeksit</a></li>
+                </ul>
+            </div>
+            <div></div>
+        </nav>
+
+        <div id="content">  <!-- KAUPUNKIPALIKAT-->
+            <section id="kaupunkisaat">
+                <article>
+                    <div>
+                        <h3>Helsinki</h3>
+                        <p>Lämpötila <span id="lampoHelsinki"></span> <br /> 
+                           Tuntuu kuin <span id="tuntuuHelsinki"></span> </p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgHelsinki" alt="weatherpicture" />
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Tampere</h3>
+                        <p>Lämpötila <span id="lampoTampere"></span> <br /> 
+                            Tuntuu kuin <span id="tuntuuTampere"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgTampere" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Turku</h3>
+                        <p>Lämpötila <span id="lampoTurku"></span> <br /> 
+                            Tuntuu kuin <span id="tuntuuTurku"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgTurku" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Jyväskylä</h3>
+                        <p>Lämpötila <span id="lampoJyväskylä"></span> <br /> 
+                           Tuntuu kuin <span id="tuntuuJyväskylä"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgJyväskylä" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Vaasa</h3>
+                        <p>Lämpötila <span id="lampoVaasa"></span> <br /> 
+                            Tuntuu kuin <span id="tuntuuVaasa"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgVaasa" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Joensuu</h3>
+                        <p>Lämpötila <span id="lampoJoensuu"></span> <br /> 
+                            Tuntuu kuin <span id="tuntuuJoensuu"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgJoensuu" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Kuopio</h3>
+                        <p>Lämpötila <span id="lampoKuopio"></span> <br /> 
+                            Tuntuu kuin <span id="tuntuuKuopio"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgKuopio" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Kajaani</h3>
+                        <p>Lämpötila <span id="lampoKajaani"></span> <br /> 
+                            Tuntuu kuin <span id="tuntuuKajaani"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgKajaani" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Oulu</h3>
+                        <p>Lämpötila <span id="lampoOulu"></span> <br /> 
+                           Tuntuu kuin <span id="tuntuuOulu"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgOulu" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Rovaniemi</h3>
+                        <p>Lämpötila <span id="lampoRovaniemi"></span> <br /> 
+                            Tuntuu kuin <span id="tuntuuRovaniemi"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgRovaniemi" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Utsjoki</h3>
+                        <p>Lämpötila <span id="lampoUtsjoki"></span> <br /> 
+                            Tuntuu kuin <span id="tuntuuUtsjoki"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgUtsjoki" alt="weatherpicture"/>
+                        </div>
+                    </div>
+                </article>
+                <div id="aukko"></div>
+            </section>
+        </div>
+
+        
+    </div>
+  
+    <footer>
+        <p>Alapalkki</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/paivansaa.js"></script>
+</body>
+</html>

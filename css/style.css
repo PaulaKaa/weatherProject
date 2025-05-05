@@ -1,0 +1,214 @@
+/*Muuttujat*/
+:root {
+  --dark-background-color: #333;
+  --light-background-color: #fffee0;
+  --footer-color: rgb(248, 251, 216);
+  --accent-color1: rgb(229, 255, 0);
+  --text-color: rgb(54, 59, 6);
+}
+
+/*Oletusmuotoilut pois*/
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+/*Alleviivaus pois*/
+a {
+  text-decoration: none;
+}
+
+/*Ylimentäessä väri ja lihavointi*/
+a:hover {
+  color: #6a7016;
+  font-weight: bold;
+}
+
+div #container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+header i {
+  font-size: 135px;
+}
+
+header h1 {
+  color: #8d951e;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid #8d951e;
+  border-top: 1.5px solid #8d951e;
+  height: 45px;
+}
+
+/*Reunat navigaatiopalkkiin*/
+nav div {
+  width: 25vw;
+}
+
+/*Navigaatiopalkki*/
+#navdiv {
+  width: 50vw;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  /*Poistaa pilkut*/
+  display: inline-block;
+
+}
+
+div #content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*------------------------------ETUSIVU------------------------------*/
+#keskitys{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    margin: 30px;
+    margin-top: 100px;
+}
+
+#nappi{
+    text-align: center;
+    margin: 15px;
+}
+
+#kayttajanKaupunki{
+
+}
+
+
+
+/*------------------------------PÄIVÄN SÄÄ------------------------------*/
+
+/*Kaupunkilaatikot riviin*/
+#kaupunkisaat {
+  display: flex;
+  flex-direction: row;
+  /*RIVITYS*/
+  flex-wrap: wrap;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+  margin-left: 20rem;
+  margin-right: 20rem;
+}
+
+article {
+  /*Jaottelu 4 rivillään*/
+  flex: 25%;
+}
+
+article div {
+  background-color: var(--light-background-color);
+  margin: 0.25rem;
+  border: 3px solid #8d951e;
+}
+
+article h3 {
+  /*Kaupunkien nimien muotoilu keskelle*/
+  text-align: center;
+  margin: 1.5vw;
+
+}
+
+article p {
+  /*Kaupunkien nimien muotoilu keskelle*/
+  text-align: center;
+  margin: 1vw;
+  margin-bottom: 2vw;
+}
+
+#aukko {
+    height:350px;
+}
+
+/*Alas kiinitetty footteri*/
+footer {
+  background-color: var(--footer-color);
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.image-wrapper {
+  text-align: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------MEDIAQUERYT------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+  article {
+    /*Kolme rinnakkain*/
+    flex: 33.33%;
+  }
+  /*Kaupunkilaatikot riviin*/
+  #kaupunkisaat {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #kaupunkisaat {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  article {
+    /*Kaksi rinnakkain*/
+    flex: 50%;
+  }
+  #kaupunkisaat {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  /*Muutetaan naviointipalkin kokoa*/
+  nav div {
+    width: 12.5vw;
+  }
+
+  /*Navigaatiopalkki*/
+  #navdiv {
+    width: 74vw;
+  }
+}

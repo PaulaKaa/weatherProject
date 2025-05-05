@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sääpalvelu Sääksi</title>
+</head>
+<body>
+    <div id="container"> <!-- SIVUN SISÄLTÖ ALKAA-->
+        <header>
+            <h1>Sääpalvelu Sääksi</h1>
+            <!--                  <i class="fa-regular fa-sun"></i>                 -->
+            
+        </header>
+        <nav> <!-- NAVIGOINTIPALKKI-->
+            <div></div>
+            <div id="navdiv">
+                <ul>
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="paivansaa.html">Päivän sää</a></li>
+                    <li><a href="uvindex.html">UV-indeksit</a></li>
+                </ul>
+            </div>
+            <div></div>
+        </nav>
+
+        <div id="content"> <!-- KYSELY-->
+            
+            <div id="keskitys">
+                <h4>Hae haluamasi kaupungin sää</h4>
+                <form id="kyselylomake">
+                    <input type="text"/>
+                    <div id="nappi">
+                        <button type="button">Hae</button>
+                    </div>
+                </form>
+            </div>
+            <article>
+                <div id="kayttajanKaupunki">
+                    <h3><span id="kayttajanKaupunkiH"></span></h3>
+                    <p><span id="kayttajanData"></span></p>
+                    <div class="image-wrapper">
+                        <img src="" id="imgkayttaja"/>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div id="aukko"></div>
+    <footer>
+        <p>Alapalkki</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
