@@ -1,4 +1,4 @@
-const API_KEY = 'TOKEN'
+const API_KEY = 'token'
 const kaupunkienNimet = ['Helsinki', 'Tampere', 'Turku', 'Jyväskylä', 'Vaasa', 'Joensuu', 'Kuopio', 'Kajaani', 'Oulu', 'Rovaniemi', 'Utsjoki']
 
 const url = 'https://api.openweathermap.org/data/2.5/weather?'
@@ -11,11 +11,9 @@ const getWeatherData = (city) => {
     axios.get(fullURL)
         .then(response => {
             const json = response.data
-            console.log(json)
 
             //Luodaan span- ja img-pohja, joka sopii kaikille kaupungeille
             const span = document.querySelector('#lampo' + city)
-            
             const icon_img = document.querySelector('#img' + city)
     
             span.innerHTML = 

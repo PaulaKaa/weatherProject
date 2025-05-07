@@ -86,39 +86,75 @@ div #content {
  
 }
 /*------------------------------ETUSIVU------------------------------*/
+
+#ylaaukko{
+  height: 80px;
+}
+
 #keskitys{
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    align-items: center;
+    text-align: center;
 }
 
-#keskitys div {
+#vasen {
+  margin-right: 20px;
+  background-color: white;
+}
+
+h2 {
+margin: 20px;
+}
+
+
+h3 {
   text-align: center;
-  width: 300px;
-  margin: 15px;
+  margin-top: 50px;
 }
 
-h4 {
-    margin: 20px;
-    margin-top: 100px;
-}
 
-h5 {
-  margin-top: 35px;
+#haut {
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+}
+
+#kayttajanData{
+  text-align: center;
+  line-height: 1.5rem;
+  margin: 50px;
+  padding: 10px;
+}
+
+
+input {
+  padding: 6px;
+  width: 310px;
+}
+
+button {
+  background-color: var(--footer-color);
+  width: 80px;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: medium;
+  color: white;
+  background-color: #6a7016;
+}
+
+#errortext {
+  margin-top: 30px;
 }
 
 #kaupunkisaatIndex{
   display: flex;
   flex-direction: row;
   /*RIVITYS*/
-  flex-wrap: wrap;
-  margin-top: 4vw;
-  margin-bottom: 4vw;
-  margin-left: 20rem;
-  margin-right: 20rem;
- 
+  flex-wrap: wrap; 
+  line-height: 1.5rem;
 }
 
 article div{
@@ -126,15 +162,13 @@ article div{
   border: 3px solid #8d951e;
 }
 
-
-
 #kayttajanKaupunki{}
 
 
 /*------------------------------PÄIVÄN SÄÄ------------------------------*/
 
 /*Kaupunkilaatikot riviin*/
-#kaupunkisaat {
+.kaupunkisaat {
   display: flex;
   flex-direction: row;
   /*RIVITYS*/
@@ -146,13 +180,13 @@ article div{
 }
 
 article {
-  /*Jaottelu 4 rivillään*/
-  flex: 25%;
+  /*Jaottelu 5 rivillään*/
+  flex: 20%;
 }
 
 .cityBox {
   background-color: var(--light-background-color);
-  margin: 0.25rem;
+  margin: 0.4rem;
   border: 3px solid #8d951e;
 }
 
@@ -171,13 +205,13 @@ article p {
 }
 
 #aukko {
-    height:350px;
+    height:150px;
 }
 
 /*Alas kiinitetty footteri*/
 footer {
   background-color: var(--footer-color);
-  height: 100px;
+  height: 112px;
 
   display: flex;
   justify-content: center;
@@ -189,7 +223,6 @@ footer {
 }
 
 footer p {
-  font-size: 0.7em;
   text-align: center;
   line-height: 1.5;
 
@@ -205,16 +238,19 @@ footer p {
 
 /*------------------------------MEDIAQUERYT------------------------------*/
 
+@media only screen and (max-width: 1600px) {
+  article {
+    /*Neljä rinnakkain*/
+    flex: 25%;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   article {
     /*Kolme rinnakkain*/
     flex: 33.33%;
   }
-  /*Kaupunkilaatikot riviin*/
-  #kaupunkisaat {
-    margin-left: 15rem;
-    margin-right: 15rem;
-  }
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -222,15 +258,14 @@ footer p {
     margin-left: 10rem;
     margin-right: 10rem;
   }
-
-
 }
 
 @media only screen and (max-width: 600px) {
-  article {
-    /*Kaksi rinnakkain*/
-    flex: 50%;
+  #ylaaukko {
+    height: 0px;
   }
+
+
   #kaupunkisaat {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -248,7 +283,6 @@ footer p {
 
   #keskitys{
     flex-direction: column;
-
 }
   
 }
