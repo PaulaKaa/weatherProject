@@ -18,7 +18,7 @@ const getWeatherData = (city) => {
     
             span.innerHTML = 
             'Lämpötila: ' + json.main.temp + '&#8451;' + '<br>' + 
-            'Tuntuu kuin: ' + json.main.feels_like + '&#8451;' + '<br> <br> <br>' +
+            'Tuntuu kuin: ' + json.main.feels_like + '&#8451;' + ' <br>' +
             'Kuvailu: ' + json.weather[0].description
         
             image = icon_url + json.weather[0].icon + '@2x.png'

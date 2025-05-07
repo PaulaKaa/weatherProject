@@ -1,5 +1,4 @@
 const API_KEY = "token";
-import { Weather } from "./class/weather.js";
 const url = "https://api.openweathermap.org/data/2.5/weather?";
 const icon_url = "http://openweathermap.org/img/wn/";
 
@@ -32,7 +31,7 @@ const updateRecent = (city, nro) => {
 
       otsake.innerHTML = city;
       span.innerHTML =
-        "<br>Lämpotila " +
+        "Lämpotila " +
         json.main.temp +
         "&#8451; <br> Tuntuu kuin " +
         json.main.feels_like +
@@ -92,8 +91,6 @@ const getWeatherData = (city) => {
       json.main.humidity +
       "% <br> <br> " +
            json.weather[0].description;
-
-        console.log(json.weather[0].description)
 
       const image = icon_url + json.weather[0].icon + "@2x.png";
       käyttajan_kuvake.src = image;
