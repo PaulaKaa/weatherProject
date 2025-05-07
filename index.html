@@ -20,37 +20,71 @@
                 <ul>
                     <li><a href="index.html">Etusivu</a></li>
                     <li><a href="paivansaa.html">Päivän sää</a></li>
-                    <li><a href="uvindex.html">UV-indeksit</a></li>
+                    <li><a href="suosikit.html">Suosikit</a></li>
                 </ul>
             </div>
             <div></div>
         </nav>
 
-        <div id="content"> <!-- KYSELY-->
-            
+        <div id="content"> <!-- KYSELY-->    
             <div id="keskitys">
-                <h4>Hae haluamasi kaupungin sää</h4>
-                <form id="kyselylomake">
-                    <input type="text"/>
-                    <div id="nappi">
-                        <button type="button">Hae</button>
-                    </div>
-                </form>
-            </div>
-            <article>
-                <div id="kayttajanKaupunki">
-                    <h3><span id="kayttajanKaupunkiH"></span></h3>
-                    <p><span id="kayttajanData"></span></p>
-                    <div class="image-wrapper">
-                        <img src="" id="imgkayttaja"/>
-                    </div>
+                <div>
+                    <h4>Hae haluamasi kaupungin sää</h4>
+                    <form id="kyselylomake">
+                        <input type="text"/>
+                       <button type="button">Hae</button>
+                    </form>
                 </div>
-            </article>
+                <section>
+                    <div id="kayttajanKaupunki">
+                        <h3><br><span id="kayttajanKaupunkiH"></span></h3>
+                        <p><span id="kayttajanData"></span></p>
+                        <div class="image-wrapper">
+                            <img src="" id="imgkayttaja"/>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <h5>Viimeaikaiset haut</h5>
+                <section id="kaupunkisaatIndex">
+                    <article>
+                        <div>
+                            <h3 id="muistin1"></h3>
+                            <p><span id="lampomuistin1"></span></p>
+                            <div class="image-wrapper">
+                                <img src="" id="imgmuistin1" alt="weatherpicture" />
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <h3 id="muistin2"></h3>
+                            <p><span id="lampomuistin2"></span></p>
+                            <div class="image-wrapper">
+                                <img src="" id="imgmuistin2" alt="weatherpicture"/>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <h3 id="muistin3"></h3>
+                            <p><span id="lampomuistin3"></span></p>
+                            <div class="image-wrapper">
+                                <img src="" id="imgmuistin3" alt="weatherpicture"/>
+                            </div>
+                        </div>
+                    </article>
+                    </section>
+            </div>
         </div>
     </div>
     <div id="aukko"></div>
     <footer>
-        <p>Alapalkki</p>
+        <p>Web-sovellusten perusteet<br>
+            Harjoitus <br>
+        Paula Kaartinen, Oamk <br>
+    5/2025</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/index.js"></script>

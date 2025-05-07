@@ -1,6 +1,4 @@
-const API_KEY = ''
-
-//Taulukot
+const API_KEY = 'TOKEN'
 const kaupunkienNimet = ['Helsinki', 'Tampere', 'Turku', 'Jyväskylä', 'Vaasa', 'Joensuu', 'Kuopio', 'Kajaani', 'Oulu', 'Rovaniemi', 'Utsjoki']
 
 const url = 'https://api.openweathermap.org/data/2.5/weather?'
@@ -8,7 +6,7 @@ const icon_url = 'http://openweathermap.org/img/wn/'
 
 
 const getWeatherData = (city) => {
-    const fullURL = url + 'q=' + city + '&units=metric' + '&appid=' + API_KEY
+    const fullURL = url + 'q=' + city + '&units=metric'+ '&lang=fi' + '&appid=' + API_KEY
 
     axios.get(fullURL)
         .then(response => {
@@ -19,10 +17,12 @@ const getWeatherData = (city) => {
             const span = document.querySelector('#lampo' + city)
             
             const icon_img = document.querySelector('#img' + city)
-            const reelfeel = document.querySelector('#tuntuu'+ city)
-
-            span.innerHTML = json.main.temp + '&#8451;'
-            reelfeel.innerHTML = json.main.feels_like + '&#8451;'
+    
+            span.innerHTML = 
+            'Lämpötila: ' + json.main.temp + '&#8451;' + '<br>' + 
+            'Tuntuu kuin: ' + json.main.feels_like + '&#8451;' + '<br> <br> <br>' +
+            'Kuvailu: ' + json.weather[0].description
+        
             image = icon_url + json.weather[0].icon + '@2x.png'
             icon_img.src = image
 
