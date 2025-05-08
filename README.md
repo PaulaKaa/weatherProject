@@ -24,8 +24,8 @@ The main idea is to provide current weather data to the user. The homepage conta
 
 ---
 ## Design
-<img src="home.png" width=250>
-<img src="search.png" width=250>
+<img src="home.png" width=400>
+<img src="search.png" width=400>
 
 ---
 ### Contributor
