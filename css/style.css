@@ -1,9 +1,7 @@
 /*Muuttujat*/
 :root {
-  --dark-background-color: #333;
   --light-background-color: #fffee0;
   --footer-color: rgb(248, 251, 216);
-  --accent-color1: rgb(229, 255, 0);
   --text-color: rgb(54, 59, 6);
 }
 
@@ -16,8 +14,6 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: var(--text-color);
 }
-
-
 
 /*Alleviivaus pois*/
 a {
@@ -38,7 +34,7 @@ div #container {
 }
 
 #content {
-/*ylä- ja alaaukot*/
+  /*ylä- ja alaaukot*/
   margin-top: 4vw;
   margin-bottom: 10vw;
 }
@@ -93,15 +89,50 @@ div #content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
 }
+
+/*Alas kiinitetty footteri*/
+footer {
+  background-color: var(--footer-color);
+  height: 112px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  line-height: 1.5;
+  font-size: large;
+
+}
+
+.image-wrapper {
+  text-align: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*------------------------------ETUSIVU------------------------------*/
-#keskitys{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#keskitys {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #vasen {
@@ -110,16 +141,14 @@ div #content {
 }
 
 h2 {
-margin: 20px;
-font-size: xx-large;
+  margin: 20px;
+  font-size: xx-large;
 }
-
 
 h3 {
   text-align: center;
   margin-top: 50px;
 }
-
 
 #haut {
   text-align: center;
@@ -128,12 +157,11 @@ h3 {
   font-size: x-large;
 }
 
-#kayttajanData{
+#kayttajanData {
   text-align: center;
   line-height: 1.5rem;
   padding: 10px;
 }
-
 
 input {
   margin: 3px;
@@ -163,15 +191,13 @@ section {
   line-height: 1.5rem;
 }
 
-article div{
+article div {
   margin: 0.5rem;
   border: 3px solid #8d951e;
 }
 
-
 /*------------------------------PÄIVÄN SÄÄ------------------------------*/
 
-/*Kaupunkilaatikot riviin*/
 .kaupunkisaat {
   margin-left: 10vw;
   margin-right: 10vw;
@@ -205,44 +231,9 @@ article p {
   line-height: 1.5em;
 }
 
-/*Alas kiinitetty footteri*/
-footer {
-  background-color: var(--footer-color);
-  height: 112px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p {
-  text-align: center;
-  line-height: 1.5;
-  font-size: large;
-
-}
-
-.image-wrapper {
-  text-align: center;
-  border: none;
-  margin: 0;
-  padding: 0;
- 
-}
-
-i{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /*------------------------------AURINKO------------------------------*/
 
-.cityBox2{
+.cityBox2 {
   flex: 10%;
   border: 4px dashed #6a7016;
 }
@@ -279,9 +270,10 @@ i{
   #content {
     margin-bottom: 20vw;
   }
-  #keskitys{
+
+  #keskitys {
     flex-direction: column;
-  } 
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -289,6 +281,7 @@ i{
     /*Kaksi rinnakkain*/
     flex: 50%;
   }
+
   #kaupunkisaat {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -304,13 +297,13 @@ i{
     width: 74vw;
   }
 
-  div p{
+  div p {
     font-size: medium;
   }
 
-  #keskitys{
+  #keskitys {
     flex-direction: column;
-  } 
+  }
 
   header h1 {
     font-size: 2rem;
@@ -331,7 +324,7 @@ i{
   #haut {
     font-size: large;
   }
-  
+
   header {
     height: 150px;
   }
@@ -343,8 +336,8 @@ i{
   input {
     width: 210px;
   }
-  
-  div p{
+
+  div p {
     font-size: small;
     padding: 8px;
   }

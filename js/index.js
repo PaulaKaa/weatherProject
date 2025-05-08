@@ -51,9 +51,9 @@ const updateRecent = (city, nro) => {
       kayttaja_span.innerHTML = "Virhe tietoja ladattaessa.";
     });
 };
+
 const removeFromLocalStorage = () => {
-  /*Poistaa local storagesta */
-  /*Poista aina eka */
+  /*Poistaa aina eka local storagesta */
   muisti.splice(nro, 1);
   localStorage.setItem(MUISTI, JSON.stringify(muisti));
   nro++;
@@ -92,17 +92,17 @@ const getWeatherData = (city) => {
       addToLocalStorage(json.name);
 
       otsake_span.innerHTML = json.name;
-      kayttaja_span.innerHTML =  "<br>Lämpotila " +
-      json.main.temp +
-      "&#8451; <br> Tuntuu kuin " +
-      json.main.feels_like +
-      "&#8451;" +
-      "<br> Tuulen nopeus: " +
-      json.wind.speed +
-      "m/s <br> Ilmankosteus:  " +
-      json.main.humidity +
-      "% <br> <br> " +
-           json.weather[0].description;
+      kayttaja_span.innerHTML = "<br>Lämpotila " +
+        json.main.temp +
+        "&#8451; <br> Tuntuu kuin " +
+        json.main.feels_like +
+        "&#8451;" +
+        "<br> Tuulen nopeus: " +
+        json.wind.speed +
+        "m/s <br> Ilmankosteus:  " +
+        json.main.humidity +
+        "% <br> <br> " +
+        json.weather[0].description;
 
       const image = icon_url + json.weather[0].icon + "@2x.png";
       käyttajan_kuvake.src = image;
@@ -131,4 +131,3 @@ const addToLocalStorage = (city) => {
   muisti.push(city);
   localStorage.setItem(MUISTI, JSON.stringify(muisti));
 };
-

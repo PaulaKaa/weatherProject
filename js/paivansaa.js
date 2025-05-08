@@ -6,7 +6,7 @@ const icon_url = 'http://openweathermap.org/img/wn/'
 
 
 const getWeatherData = (city) => {
-    const fullURL = url + 'q=' + city + '&units=metric'+ '&lang=fi' + '&appid=' + API_KEY
+    const fullURL = url + 'q=' + city + '&units=metric' + '&lang=fi' + '&appid=' + API_KEY
 
     axios.get(fullURL)
         .then(response => {
@@ -15,12 +15,12 @@ const getWeatherData = (city) => {
             //Luodaan span- ja img-pohja, joka sopii kaikille kaupungeille
             const span = document.querySelector('#lampo' + city)
             const icon_img = document.querySelector('#img' + city)
-    
-            span.innerHTML = 
-            'Lämpötila: ' + json.main.temp + '&#8451;' + '<br>' + 
-            'Tuntuu kuin: ' + json.main.feels_like + '&#8451;' + ' <br>' +
-            'Kuvailu: ' + json.weather[0].description
-        
+
+            span.innerHTML =
+                'Lämpötila: ' + json.main.temp + '&#8451;' + '<br>' +
+                'Tuntuu kuin: ' + json.main.feels_like + '&#8451;' + ' <br>' +
+                'Kuvailu: ' + json.weather[0].description
+
             image = icon_url + json.weather[0].icon + '@2x.png'
             icon_img.src = image
 
