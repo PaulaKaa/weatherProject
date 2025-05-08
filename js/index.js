@@ -1,4 +1,4 @@
-const API_KEY = "token";
+const API_KEY = "";
 const url = "https://api.openweathermap.org/data/2.5/weather?";
 const icon_url = "http://openweathermap.org/img/wn/";
 
@@ -9,7 +9,7 @@ const muistin1 = document.querySelector("#muistin1");
 const muistin2 = document.querySelector("#muistin2");
 const muistin3 = document.querySelector("#muistin3");
 const errorText_span = document.querySelector("#errortext");
-let paivittaja = 0;
+let nro = 0;
 
 /* LocalStoragea varten */
 const MUISTI = "muisti";
@@ -51,6 +51,13 @@ const updateRecent = (city, nro) => {
       kayttaja_span.innerHTML = "Virhe tietoja ladattaessa.";
     });
 };
+const removeFromLocalStorage = () => {
+  /*Poistaa local storagesta */
+  /*Poista aina eka */
+  muisti.splice(nro, 1);
+  localStorage.setItem(MUISTI, JSON.stringify(muisti));
+  nro++;
+};
 
 const updateRecentCitys = () => {
   if (JSON.parse(localStorage.getItem(MUISTI)) === null) {
@@ -59,10 +66,15 @@ const updateRecentCitys = () => {
   } else if (muisti.length === 2) {
     muistin1.innerHTML = muisti[muisti.length - 1];
     muistin2.innerHTML = muisti[muisti.length - 2];
-  } else if (muisti.length > 2) {
+  } else if (muisti.length === 3) {
     updateRecent(muisti[muisti.length - 1], 1);
     updateRecent(muisti[muisti.length - 2], 2);
     updateRecent(muisti[muisti.length - 3], 3);
+  } else if (muisti.length > 3) {
+    updateRecent(muisti[muisti.length - 1], 1);
+    updateRecent(muisti[muisti.length - 2], 2);
+    updateRecent(muisti[muisti.length - 3], 3);
+    removeFromLocalStorage()
   }
 };
 
@@ -120,11 +132,3 @@ const addToLocalStorage = (city) => {
   localStorage.setItem(MUISTI, JSON.stringify(muisti));
 };
 
-const removeFromLocalStorage = () => {
-  /*Poistaa local storagesta */
-  /*Poista aina eka */
-  let nro = 0;
-  muisti.splice(nro, 1);
-  localStorage.setItem(MUISTI, JSON.stringify(muisti));
-  nro++;
-};

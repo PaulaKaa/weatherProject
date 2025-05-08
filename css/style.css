@@ -40,7 +40,7 @@ div #container {
 #content {
 /*ylä- ja alaaukot*/
   margin-top: 4vw;
-  margin-bottom: 6vw;
+  margin-bottom: 10vw;
 }
 
 header {
@@ -136,6 +136,7 @@ h3 {
 
 
 input {
+  margin: 3px;
   padding: 6px;
   width: 310px;
 }
@@ -233,6 +234,12 @@ footer p {
  
 }
 
+i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*------------------------------AURINKO------------------------------*/
 
 .cityBox2{
@@ -244,14 +251,15 @@ footer p {
 
 @media only screen and (max-width: 1600px) {
   article {
-
+    /*Neljä rinnakkain*/
+    flex: 25%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   article {
     /*Kolme rinnakkain*/
-
+    flex: 33.33%;
   }
 
   header h1 {
@@ -263,12 +271,24 @@ footer p {
   header h1 {
     font-size: 3rem;
   }
-  #content {
-    margin-bottom: 150px;
+
+  h2 {
+    font-size: large;
   }
+
+  #content {
+    margin-bottom: 20vw;
+  }
+  #keskitys{
+    flex-direction: column;
+  } 
 }
 
 @media only screen and (max-width: 600px) {
+  article {
+    /*Kaksi rinnakkain*/
+    flex: 50%;
+  }
   #kaupunkisaat {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -284,6 +304,10 @@ footer p {
     width: 74vw;
   }
 
+  div p{
+    font-size: medium;
+  }
+
   #keskitys{
     flex-direction: column;
   } 
@@ -293,6 +317,43 @@ footer p {
   }
 
   #content {
-    margin-bottom: 150px;
+    margin-bottom: 22vw;
+  }
+}
+
+
+/*Puhelin*/
+@media only screen and (max-width: 400px) {
+  #content {
+    margin-bottom: 30vw;
+  }
+
+  #haut {
+    font-size: large;
+  }
+  
+  header {
+    height: 150px;
+  }
+
+  nav li {
+    font-size: medium;
+  }
+
+  input {
+    width: 210px;
+  }
+  
+  div p{
+    font-size: small;
+    padding: 8px;
+  }
+
+  footer {
+    height: 85px;
+  }
+
+  footer p {
+    font-size: small;
   }
 }

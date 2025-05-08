@@ -1,4 +1,4 @@
-const API_KEY = 'token'
+const API_KEY = ''
 const kaupunkienNimet = ['Helsinki', 'Tampere', 'Turku', 'Jyväskylä', 'Vaasa', 'Joensuu', 'Kuopio', 'Kajaani', 'Oulu', 'Rovaniemi', 'Utsjoki']
 
 const url = 'https://api.openweathermap.org/data/2.5/weather?'
